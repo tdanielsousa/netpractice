@@ -4,7 +4,8 @@
 
 ## Description
 
-NetPractice is a 42 network administration project designed to teach the fundamentals of TCP/IP networking, addressing, and routing. The core objective is to configure and fix broken network topologies across 10 increasingly complex levels using a web-based training interface. 
+NetPractice is a 42 network administration project designed to teach the fundamentals of TCP/IP networking, addressing, and routing. 
+The core objective is to configure and fix broken network topologies across 10 increasingly complex levels using a web-based training interface. 
 
 By calculating IP addresses, applying subnet masks, and directing traffic via default gateways and routers, this project bridges theoretical networking concepts with practical configuration logic.
 
@@ -17,11 +18,12 @@ By calculating IP addresses, applying subnet masks, and directing traffic via de
 1. Launch the Interface: Run the startup script from the root of the repository:
    ./run.sh
 2. Access NetPractice: Open your web browser and navigate to http://localhost:8080 (or the port specified in your terminal output).
-3. Solve the Levels: Select a level (1 through 10) and configure the network parameters (IP addresses, subnet masks, routes) so that all nodes can successfully communicate.
+3. Select either Training (10 progressive levels) or Evaluation(3 randoms levels from 6 to 10).
+4. Solve the Levels.
 
 ### Exporting Configurations
 
-* Once a level is successfully solved in the interface, click the Export button (get config) to generate the level's configuration file.
+* Once a level is successfully solved in the interface, click the Export button (get my config) to generate the level's json file.
 * Save or move each exported file to the root of your repository.
 
 ### Submission Requirements
@@ -35,16 +37,10 @@ To successfully submit the project, your Git repository must include:
 ## Resources
 
 
-### Technical Choices & Concepts Covered
+### Concepts Covered
 
-* IPv4 Address Formatting: Understanding standard dotted-decimal notation and Classless Inter-Domain Routing (CIDR) notation (e.g., /24, /30).
-* Subnetting & Subnet Masks: Calculating network IDs, broadcast addresses, and usable host address ranges for variable-length subnets.
-* Routing & Switching:
-  * Switches: Operating at Layer 2 to connect devices within the same local network segment/subnet without modifying IP packets.
-  * Routers: Operating at Layer 3 to forward traffic between different subnets using routing tables and default gateways.
-* Private vs. Public Addressing: Distinguishing between loopback/private ranges (RFC 1918) and public internet routing constraints.
 * **TCP/IP Addressing:** Configuring static IPv4 addresses across network interfaces and validating host accessibility within local subnets.
-* **Subnet Masks:** Utilizing variable-length subnet masks (VLSM) and CIDR notation to define network boundaries, broadcast addresses, and usable host ranges.
+* **Subnet Masks:** Utilizing variable-length subnet masks and CIDR notation to define network boundaries, broadcast addresses, and usable host ranges.
 * **Default Gateways:** Assigning gateway addresses to forward outbound network traffic to destination subnets outside the local broadcast domain.
 * **Routers and Switches:** 
   * **Switches (Layer 2):** Connecting devices within the same subnet to allow direct intra-network communication.
@@ -54,16 +50,16 @@ To successfully submit the project, your Git repository must include:
 
 ### Networking References
 
-* OSI Model & TCP/IP Stack: Overview of Layer 2 (Data Link) and Layer 3 (Network) operations.
-* RFC 791 (Internet Protocol): Official specification for IPv4 addressing and packet structures.
-* RFC 1918 (Address Allocation for Private Internets): Standard defining private IP ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16).
-* Subnet Cheat Sheets: Practical guides for binary-to-decimal subnet mask conversions and host allocation limits.
+* Video series about subnetting and addressing: https://www.youtube.com/watch?v=5WfiTHiU4x8
+* Subnetting: https://www.geeksforgeeks.org/computer-networks/introduction-to-subnetting/
+* TCP/IP Adressing: https://www.ibm.com/docs/en/aix/7.2.0?topic=protocol-tcpip-addressing
+* OSI Layers: https://www.geeksforgeeks.org/computer-networks/open-systems-interconnection-model-osi/
 
 ### AI Usage Declaration
 
 AI tools were utilized during this project for the following tasks:
-* Subnet Calculation Verification: Verifying edge-case binary subnet calculations and host ranges for complex levels.
+* Subnet Calculation Verification: Subnet calculations and host ranges for complex levels.
 * Documentation Support: Structuring and drafting the README file according to 42's NetPractice subject guidelines.
-* Concept Clarification: Generating targeted explanations for router hop logic and gateway reachability rules.
+* Concept Clarification: Generating targeted explanations for router hop logic and gateway reachability rules. 
 
-*No configuration solutions were directly generated by AI; all 10 network levels were solved manually through the NetPractice interface.*
+---
